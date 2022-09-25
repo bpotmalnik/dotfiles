@@ -1,8 +1,10 @@
 alias br="source $HOME/.zshrc"
 alias c="clear"
 
+alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+
 # Dotfiles
-alias dot="cd $DOTFILES && code . && cd -"
+alias dot="cd $DOTFILES && vim . && cd -"
 alias dotfiles="cd $DOTFILES"
 
 # VIM
