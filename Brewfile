@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
+tap 'leoafarias/fvm'
 
 # Binaries
 brew 'awscli'
@@ -31,6 +32,7 @@ brew 'imagemagick'
 brew 'mysql'
 brew 'nginx'
 brew 'n'
+brew 'redis'
 
 brew 'fvm'
 
@@ -38,13 +40,18 @@ brew 'fvm'
 cask '1password'
 cask 'discord'
 cask 'docker'
+cask 'fig'
 cask 'firefox'
 cask 'github'
 cask 'google-chrome'
+cask 'iterm2'
 cask 'imageoptim'
 cask 'phpmon'
 cask 'ray'
+cask 'signal'
 cask 'slack'
+cask 'spotify'
+cask 'rectangle'
 cask 'tableplus'
 cask 'tinkerwell'
 cask 'visual-studio-code'
@@ -57,6 +64,7 @@ cask 'font-roboto'
 cask 'font-jetbrains-mono'
 
 # Mac App Store
+mas 'Bear' id: 1091189122
 mas 'Giphy Capture', id: 668208984
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
