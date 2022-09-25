@@ -32,6 +32,8 @@ brew bundle --file $DOTFILES/Brewfile
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$DOTFILES/themes/spaceship-prompt"
 ln -s "$DOTFILES/themes/spaceship-prompt/spaceship.zsh-theme" "$DOTFILES/themes/spaceship.zsh-theme"
 
+ln -s "$DOTFILES/config/nvim" "~/.config/nvim"
+
 git config --global core.excludesFile "$DOTFILES/.gitignore_global"
 
 # Source .macos settings
