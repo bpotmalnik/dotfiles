@@ -29,3 +29,7 @@ vim.opt.scrolloff = 8
 
 vim.opt.termguicolors = true
 vim.opt.cmdheight = 1
+
+vim.opt.autoindent = true
+
+vim.opt.signcolumn = "yes"
