@@ -17,6 +17,7 @@ alias php="valet php"
 alias composer="valet composer"
 alias which-php="valet which-php"
 alias sail="[ -f sail ] && sh sail || sh vendor/bin/sail"
+alias pint="./vendor/bin/pint -v"
 
 # Flutter
 alias f="fvm flutter"
