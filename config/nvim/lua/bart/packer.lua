@@ -16,6 +16,7 @@ return require("packer").startup(function()
     use("nvim-treesitter/nvim-treesitter-context")
 
     use("neovim/nvim-lspconfig")
+    use("folke/lua-dev.nvim")
     use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/nvim-cmp")
@@ -25,4 +26,17 @@ return require("packer").startup(function()
     use("saadparwaiz1/cmp_luasnip")
 
     use("ThePrimeagen/harpoon")
+
+    use("dart-lang/dart-vim-plugin")
+    use("thosakwe/vim-flutter", {as="vim-flutter"})
+
+    use("nvim-neotest/neotest", {
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-treesitter/nvim-treesitter",
+        "antoinemadec/FixCursorHold.nvim",
+
+      }
+    })
+    use("olimorris/neotest-phpunit")
 end)

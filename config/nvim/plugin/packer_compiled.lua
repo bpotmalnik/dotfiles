@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/bart/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dart-vim-plugin"] = {
+    loaded = true,
+    path = "/Users/bart/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
+    url = "https://github.com/dart-lang/dart-vim-plugin"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/bart/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -104,10 +109,25 @@ _G.packer_plugins = {
     path = "/Users/bart/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
+  ["lua-dev.nvim"] = {
+    loaded = true,
+    path = "/Users/bart/.local/share/nvim/site/pack/packer/start/lua-dev.nvim",
+    url = "https://github.com/folke/lua-dev.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/bart/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  neotest = {
+    loaded = true,
+    path = "/Users/bart/.local/share/nvim/site/pack/packer/start/neotest",
+    url = "https://github.com/nvim-neotest/neotest"
+  },
+  ["neotest-phpunit"] = {
+    loaded = true,
+    path = "/Users/bart/.local/share/nvim/site/pack/packer/start/neotest-phpunit",
+    url = "https://github.com/olimorris/neotest-phpunit"
   },
   nvim = {
     loaded = true,
@@ -158,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bart/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-flutter"] = {
+    loaded = true,
+    path = "/Users/bart/.local/share/nvim/site/pack/packer/start/vim-flutter",
+    url = "https://github.com/thosakwe/vim-flutter"
   }
 }
 
