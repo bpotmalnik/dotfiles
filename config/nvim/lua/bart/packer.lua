@@ -28,8 +28,12 @@ return require("packer").startup(function()
     use("ThePrimeagen/harpoon")
 
     use("dart-lang/dart-vim-plugin")
-    use("thosakwe/vim-flutter", {as="vim-flutter"})
 
+    use("akinsho/flutter-tools.nvim", {
+      requires = {
+        "nvim-lua/plenary.nvim"
+      }
+    })
     use("nvim-neotest/neotest", {
       requires = {
         "nvim-lua/plenary.nvim",

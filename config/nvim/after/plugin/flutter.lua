@@ -1,14 +1,9 @@
-local Remap = require("bart.keymap")
-local nnoremap = Remap.nnoremap
+local nnoremap = require("bart.keymap").nnoremap
 
-nnoremap("<leader>fad", ":FlutterRun lib/main_development.dart<cr>")
-nnoremap("<leader>fq", ":FlutterQuit<cr>")
-nnoremap("<leader>fr", ":FlutterHotReload<cr>")
-nnoremap("<leader>fR", ":FlutterHotRestart<cr>")
+
+nnoremap("<leader>fs", ":FlutterRun --flavor development -t lib/main_development.dart<cr>")
 nnoremap("<leader>fd", ":FlutterDevices<cr>")
-nnoremap("<leader>fD", ":FlutterVisualDebug<cr>")
 nnoremap("<leader>fe", ":FlutterEmulators<cr>")
-nnoremap("<leader>fE", ":FlutterEmulatorsLaunch<cr>")
-nnoremap("<leader>fm", function()
-  vim.fn.sign_define("FlutterMenu")
-end)
+nnoremap("<leader>fr", ":FlutterReload<cr>")
+nnoremap("<leader>fR", ":FlutterRestart<cr>")
+nnoremap("<leader>fq", ":FlutterQuit<cr>")

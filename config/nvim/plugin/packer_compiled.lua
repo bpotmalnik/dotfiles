@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/bart/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
     url = "https://github.com/dart-lang/dart-vim-plugin"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/bart/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/bart/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -178,11 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bart/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-flutter"] = {
-    loaded = true,
-    path = "/Users/bart/.local/share/nvim/site/pack/packer/start/vim-flutter",
-    url = "https://github.com/thosakwe/vim-flutter"
   }
 }
 

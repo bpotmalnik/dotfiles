@@ -72,4 +72,9 @@ local function config(_config)
     }, _config or {})
 end
 
-require("lspconfig").intelephense.setup(config())
+require("lspconfig").phpactor.setup(config())
+
+require("flutter-tools").setup({
+  fvm = true,
+  lsp = config()
+})
