@@ -34,6 +34,8 @@ return require("packer").startup(function()
         "nvim-lua/plenary.nvim"
       }
     })
+    use("mfussenegger/nvim-dap")
+
     use("nvim-neotest/neotest", {
       requires = {
         "nvim-lua/plenary.nvim",

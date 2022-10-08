@@ -76,5 +76,21 @@ require("lspconfig").phpactor.setup(config())
 
 require("flutter-tools").setup({
   fvm = true,
+  debugger = {
+    enabled = true,
+    run_via_dap = true,
+    register_configurations = function(paths)
+      require("dap").configurations.dart = {
+        {
+          type = "dart",
+          request = "launch",
+          name = "Launch Flutter Program",
+          program = "${file}",
+          cwd = "${workspaceFolder}",
+          toolArgs = {"-d", "iPhone"}
+        }
+      }
+    end,
+  },
   lsp = config()
 })
