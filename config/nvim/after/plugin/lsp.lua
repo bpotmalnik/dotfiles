@@ -8,9 +8,7 @@ local lspkind = require("lspkind")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require("lua-dev").setup({
-  
-})
+require("lua-dev").setup()
 
 cmp.setup({
     snippet = {
@@ -43,9 +41,9 @@ cmp.setup({
         },
     },
     sources = {
+        { name = 'luasnip'},
         { name = 'nvim_lsp'},
         { name = 'path'},
-        { name = 'luasnip'},
         { name = 'buffer', keywoard_length = 5},
     },
     experimental = {
@@ -59,37 +57,34 @@ local function config(_config)
         capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
         on_attach = function()
             nnoremap("gd", function() vim.lsp.buf.definition() end)
+            nnoremap("gD", function() vim.lsp.buf.declaration() end)
+            nnoremap("gy", function() vim.lsp.buf.type_definition() end)
             nnoremap("K", function() vim.lsp.buf.hover() end)
-			      nnoremap("<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
-			      nnoremap("<leader>vd", function() vim.diagnostic.open_float() end)
+			      nnoremap("gws", function() vim.lsp.buf.workspace_symbol() end)
+			      nnoremap("gf", function() vim.diagnostic.open_float() end)
 			      nnoremap("[d", function() vim.diagnostic.goto_next() end)
 			      nnoremap("]d", function() vim.diagnostic.goto_prev() end)
-			      nnoremap("<leader>vca", function() vim.lsp.buf.code_action() end)
-            nnoremap("<leader>vrr", function() vim.lsp.buf.references() end)
-			      nnoremap("<leader>vrn", function() vim.lsp.buf.rename() end)
+			      nnoremap("ga", function() vim.lsp.buf.code_action() end)
+            nnoremap("grr", function() vim.lsp.buf.references() end)
+			      nnoremap("grn", function() vim.lsp.buf.rename() end)
 			      inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
         end,
     }, _config or {})
 end
 
 require("lspconfig").phpactor.setup(config())
-
+require("lspconfig").luau_lsp.setup(config())
 require("flutter-tools").setup({
   fvm = true,
+  dev_log = {
+    enabled = false,
+  },
   debugger = {
     enabled = true,
     run_via_dap = true,
-    register_configurations = function(paths)
-      require("dap").configurations.dart = {
-        {
-          type = "dart",
-          request = "launch",
-          name = "Launch Flutter Program",
-          program = "${file}",
-          cwd = "${workspaceFolder}",
-          toolArgs = {"-d", "iPhone"}
-        }
-      }
+    register_configurations = function(_)
+      require("dap").configurations.dart = {}
+      require("dap.ext.vscode").load_launchjs()
     end,
   },
   lsp = config()
