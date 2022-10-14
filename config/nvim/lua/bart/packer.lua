@@ -15,6 +15,10 @@ return require("packer").startup(function()
     -- Add context when scrolling
     use("nvim-treesitter/nvim-treesitter-context")
 
+    use("TimUntersberger/neogit", {
+      require = "nvim-lua/plenary.nvim"
+    })
+
     use("neovim/nvim-lspconfig")
     use("folke/lua-dev.nvim")
     use("hrsh7th/cmp-nvim-lsp")
