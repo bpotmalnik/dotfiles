@@ -1,4 +1,6 @@
-require('telescope').setup({
+local telescope = require('telescope')
+
+telescope.setup({
   defaults = {
     file_ignore_patters = {
       "node_modules",
@@ -8,3 +10,6 @@ require('telescope').setup({
     color_devicons = true,
   },
 })
+
+telescope.load_extension("dap")
+telescope.load_extension("flutter")
