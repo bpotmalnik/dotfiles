@@ -7,4 +7,5 @@ nnoremap("<leader>tf", function()
   require("neotest").run.run(vim.fn.expand("%")) 
 end, silent)
 nnoremap("<leader>th", function() require("neotest").run.stop() end, silent)
+nnoremap("<leader>td", function() require("neotest").run.run({strategy = "dap"}) end, silent) 
 
