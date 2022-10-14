@@ -18,3 +18,7 @@ end)
 nnoremap("<leader>pb", function()
     require("telescope.builtin").buffers()
 end)
+
+nnoremap("<leader>pef", function()
+    require("telescope").extensions.flutter.commands()
+end)
