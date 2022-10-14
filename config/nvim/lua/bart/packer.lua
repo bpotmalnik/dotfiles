@@ -35,14 +35,22 @@ return require("packer").startup(function()
       }
     })
     use("mfussenegger/nvim-dap")
-
+    use("nvim-telescope/telescope-dap.nvim")
     use("nvim-neotest/neotest", {
       requires = {
         "nvim-lua/plenary.nvim",
         "nvim-treesitter/nvim-treesitter",
         "antoinemadec/FixCursorHold.nvim",
-
+        "olimorris/neotest-phpunit",
+        "sidlatau/neotest-dart"
       }
     })
     use("olimorris/neotest-phpunit")
+    use("sidlatau/neotest-dart")
+
+    use("TimUntersberger/neogit", {
+      requires = {
+        "nvim-lua/plneary.nvim"
+      }
+    })
 end)
