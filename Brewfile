@@ -19,6 +19,8 @@ brew 'mackup'
 brew 'mas'
 brew 'pkg-config'
 brew 'svn'
+brew 'fd'
+brew 'ripgrep'
 
 brew 'jpegoptim'
 brew 'optipng'
