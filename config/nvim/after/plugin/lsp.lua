@@ -8,7 +8,7 @@ local lspkind = require("lspkind")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require("lua-dev").setup()
+require("neodev").setup()
 
 cmp.setup({
     snippet = {
@@ -54,7 +54,7 @@ cmp.setup({
 
 local function config(_config)
     return vim.tbl_deep_extend("force",{
-        capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+        capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
         on_attach = function()
             nnoremap("gd", function() vim.lsp.buf.definition() end)
             nnoremap("gD", function() vim.lsp.buf.declaration() end)
