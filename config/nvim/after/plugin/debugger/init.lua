@@ -1,7 +1,6 @@
 local dap = require("dap")
 local dapui_widgets = require("dap.ui.widgets")
 local remap = require("bart.keymap") 
-local daptext = require("nvim-dap-virtual-text")
 local nnoremap = remap.nnoremap
 
 local repl_options = {
@@ -26,9 +25,6 @@ vim.api.nvim_create_autocmd(
   }
 )
 
-daptext.setup({
-  enabled = true,
-})
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
     dap.repl.open(repl_options)

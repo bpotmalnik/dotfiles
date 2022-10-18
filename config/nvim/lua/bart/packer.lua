@@ -41,8 +41,6 @@ return require("packer").startup(function()
         "nvim-lua/plenary.nvim",
         "nvim-treesitter/nvim-treesitter",
         "antoinemadec/FixCursorHold.nvim",
-        "olimorris/neotest-phpunit",
-        "sidlatau/neotest-dart"
       }
     })
     use("olimorris/neotest-phpunit")
