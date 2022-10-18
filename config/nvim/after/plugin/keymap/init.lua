@@ -24,7 +24,4 @@ nnoremap("<leader>yy", "\"+yy")
 xnoremap("<Tab>", ">gv")
 xnoremap("<S-Tab>", "<gv")
 
-nnoremap("<leader>d", "\"_d")
-vnoremap("<leader>d", "\"_d")
-
 nnoremap("Y", "yg$")
