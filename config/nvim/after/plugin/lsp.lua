@@ -17,8 +17,8 @@ cmp.setup({
         end,
     },
     mapping = cmp.mapping.preset.insert({
-        ['<C-j>'] = cmp.mapping.select_prev_item(),
-        ['<C-k>'] = cmp.mapping.select_next_item(),
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
+        ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<CR>'] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
@@ -60,19 +60,19 @@ local function config(_config)
             nnoremap("gD", function() vim.lsp.buf.declaration() end)
             nnoremap("gy", function() vim.lsp.buf.type_definition() end)
             nnoremap("K", function() vim.lsp.buf.hover() end)
-			      nnoremap("gws", function() vim.lsp.buf.workspace_symbol() end)
-			      nnoremap("gf", function() vim.diagnostic.open_float() end)
-			      nnoremap("[d", function() vim.diagnostic.goto_next() end)
-			      nnoremap("]d", function() vim.diagnostic.goto_prev() end)
-			      nnoremap("ga", function() vim.lsp.buf.code_action() end)
+		    nnoremap("gws", function() vim.lsp.buf.workspace_symbol() end)
+			nnoremap("gf", function() vim.diagnostic.open_float() end)
+			nnoremap("[d", function() vim.diagnostic.goto_next() end)
+			nnoremap("]d", function() vim.diagnostic.goto_prev() end)
+			nnoremap("ga", function() vim.lsp.buf.code_action() end)
             nnoremap("grr", function() vim.lsp.buf.references() end)
-			      nnoremap("grn", function() vim.lsp.buf.rename() end)
-			      inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
+			nnoremap("grn", function() vim.lsp.buf.rename() end)
+			inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
         end,
     }, _config or {})
 end
 
-require("lspconfig").phpactor.setup(config())
+require("lspconfig").intelephense.setup(config())
 require("lspconfig").luau_lsp.setup(config())
 require("flutter-tools").setup({
   fvm = true,
@@ -87,5 +87,14 @@ require("flutter-tools").setup({
       require("dap.ext.vscode").load_launchjs()
     end,
   },
-  lsp = config()
+  lsp = config({
+    settings = {
+        showTodos = true,
+        completeFunctionCalls = true,
+        analysisExcludedFolders = {},
+        renameFilesWithClasses = "prompt",
+        enableSnippets = true,
+    }
+  })
 })
+
