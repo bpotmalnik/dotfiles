@@ -4,6 +4,9 @@
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
+PERSONAL=$DOTFILES/personal
+source $PERSONAL/dont-look-inside.zsh
+
 autoload -U compinit && compinit
 
 # Set name of the theme to load --- if set to "random", it will
