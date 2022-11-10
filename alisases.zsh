@@ -38,3 +38,5 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 alias tm="~/.dotfiles/tmux-sessionizer"
+
+alias nuke="git clean -df && git reset --hard"
