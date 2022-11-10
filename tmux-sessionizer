@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else 
-  selected=$(find ~/Sites ~/Code ~/.dotfiles ~/Flutter -mindepth 1 -maxdepth 1 -type d | fzf)
+  selected=$(find ~/Sites ~/Code/packages/brandiq ~/.dotfiles ~/Flutter ~/Code/InterNACHI -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
