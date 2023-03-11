@@ -5,6 +5,8 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 
 # Dotfiles
 alias dot="cd $DOTFILES && vim . && cd -"
+alias nvimm="cd $DOTFILES/.config/nvim && vim . && cd -"
+alias conf="cd ~/.config/nvim && vim . && cd -"
 alias dotfiles="cd $DOTFILES"
 
 # VIM

@@ -38,6 +38,8 @@ brew 'redis'
 
 brew 'fvm'
 
+brew 'lua-language-server'
+
 # Apps
 cask '1password'
 cask 'discord'

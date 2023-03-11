@@ -1,8 +1,8 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
+export N_PREFIX=$HOME/.n
 
 PERSONAL=$DOTFILES/personal
 source $PERSONAL/dont-look-inside.zsh
@@ -105,8 +105,10 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add custom git functions
-source $DOTFILES/git.sh
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/bart/.dart-cli-completion/zsh-config.zsh ]] && . /Users/bart/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
